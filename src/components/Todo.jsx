@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';

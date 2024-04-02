@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addTodo, changeTodo, editTaskMethod } from '../store/TaskSlice'
+
+//generating an unique id for each todo
 function generateUniqueId() {
   return '_' + Math.random().toString(36).substr(2, 9);
 }
 const Header = () => {
-  console.log('in header')
   const {editTask} = useSelector(store=> store.todos)
   const dispatch = useDispatch()
   const [inputTask, setInputTask] = useState('')
@@ -17,7 +18,7 @@ const Header = () => {
   },[editTask])
   
   const HandleClick=()=>{
-    console.log(inputTask)
+    //check for editTask functionality to implement
     if (Object.keys(editTask).length === 0) {
       console.log(editTask)
       const taskId = generateUniqueId()
@@ -43,8 +44,7 @@ const Header = () => {
       
     }
     
-    setInputTask('');
-    // if(inputTask){localStorage.setItem(taskId,JSON.stringify(task))};
+    setInputTask('')
   }
   return (
     <div className='flex gap-2 mb-2'>
