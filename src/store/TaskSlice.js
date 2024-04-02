@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+//creating a slice specifically for todos state management and for smooth data flow.
 const taskSlice = createSlice({
     name: 'todos',
     initialState: {todos:[],editTask:{}},
